@@ -127,6 +127,21 @@ client,available,held,total,locked
 cargo run -- transactions.csv > accounts.csv
 ```
 
+## AI Usage Declaration
+
+ChatGPT was used to create the csv sample test file.
+
+Prompts Used 
+
+type,client,tx,amount
+deposit,1,1,100.0
+withdrawal,1,2,50.0
+dispute,1,1,
+resolve,1,1,
+chargeback,1,1,
+
+Given this Sample csv above create a 500 line csv following these rules csv headers must be type,client,tx,amount type column can only be one of these text values withdrawal,deposit,resolve,chargeback. client column can be a value between 1 and 10 tx is a global uniq value sequential starting at 1 amount is a Decimal value and is only available when the type column is either deposit or withdrawal and should be blank after the comma if not. clients can have multiple deposits and withdrawal on them
+
 ## License
 
 This project is MIT licensed.
